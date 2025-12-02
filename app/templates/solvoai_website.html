@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SolvoAI - электронный цифровой психолог нового поколения. Онлайн-консультации с ИИ, персонализированные рекомендации и анализ настроения.">
+    <meta name="keywords" content="психолог, ИИ психолог, онлайн консультации, психологическая помощь, цифровой психолог">
     <title>SolvoAI - Электронный Цифровой Психолог</title>
-    <link rel="icon" type="image/png" href="favicon-dark-144x144.png" >
+    <link rel="icon" type="image/png" sizes="144x144" href="favicon-dark__2-144x144.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon-dark__2-144x144.png">
     <style>
         * {
             margin: 0;
@@ -12,11 +15,15 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.8) 0%, rgba(9, 56, 110, 0.8) 15%),
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.4) 0%, hsla(212, 84.90%, 23.30%, 0.3) 100%),
                         url('pexels-francesco-ungaro-449018.jpg') center/cover no-repeat fixed;
             min-height: 100vh;
             background-attachment: fixed;
@@ -76,10 +83,17 @@
             color: #333;
             font-weight: 500;
             transition: color 0.3s;
+            position: relative;
         }
 
         nav a:hover {
             color: #667eea;
+        }
+
+        nav a:focus {
+            outline: 2px solid #667eea;
+            outline-offset: 4px;
+            border-radius: 4px;
         }
 
         .hero {
@@ -117,6 +131,11 @@
         .cta-button:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:focus {
+            outline: 3px solid rgba(102, 126, 234, 0.5);
+            outline-offset: 2px;
         }
 
         .features {
@@ -171,10 +190,12 @@
         }
 
         .about {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, rgba(20, 8, 128, 0.8) 0%, rgba(18, 8, 165, 0.4) 15%),
+                        url('pexels-ryutaro-5220010.jpg') center/cover no-repeat;
             color: white;
             padding: 60px 20px;
             text-align: center;
+            position: relative;
         }
 
         .about h2 {
@@ -194,7 +215,7 @@
             background: rgba(0,0,0,0.9);
             color: white;
             text-align: center;
-            padding: 30px 20px;
+            padding: 10px 20px;
         }
 
         @keyframes fadeInUp {
@@ -221,6 +242,66 @@
                 margin-left: 15px;
                 font-size: 14px;
             }
+
+            .logo h2 {
+                font-size: 22px;
+            }
+
+            .logo img {
+                width: 48px;
+                height: 48px;
+            }
+
+            .features {
+                padding: 40px 15px;
+            }
+
+            .feature-card {
+                padding: 30px 20px;
+            }
+
+            .about {
+                padding: 40px 15px;
+            }
+
+            .about h2 {
+                font-size: 28px;
+            }
+
+            .about p {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            nav a {
+                margin-left: 0;
+            }
+
+            .hero {
+                padding: 60px 15px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .cta-button {
+                padding: 12px 30px;
+                font-size: 16px;
+            }
         }
     </style>
 </head>
@@ -228,14 +309,14 @@
     <header>
         <div class="header-content">
             <div class="logo">
-                <img src="favicon-dark.png" alt="SolvoAI Logo">
+                <img src="favicon-dark.png" alt="SolvoAI Logo" width="64" height="64" loading="eager">
                 <h2>SolvoAI</h2>
             </div>
-            <nav>
-                <a href="#home">Главная</a>
-                <a href="#services">Услуги</a>
-                <a href="#about">О нас</a>
-                <a href="#contact">Контакты</a>
+            <nav aria-label="Основная навигация">
+                <a href="#home" aria-label="Перейти на главную страницу">Главная</a>
+                <a href="#services" aria-label="Перейти к услугам">Услуги</a>
+                <a href="#about" aria-label="Узнать о SolvoAI">О нас</a>
+                <a href="#contact" aria-label="Перейти к контактам">Контакты</a>
             </nav>
         </div>
     </header>
@@ -244,7 +325,7 @@
         <div class="container">
             <h1>Welcome to SolvoAI</h1>
             <p>Ваш цифровой психолог нового поколения</p>
-            <a href="#services" class="cta-button">Начать сейчас</a>
+            <a href="#services" class="cta-button" aria-label="Начать использовать SolvoAI">Начать сейчас</a>
         </div>
     </section>
 
