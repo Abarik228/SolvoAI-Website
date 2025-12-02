@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SolvoAI - Электронный Цифровой Психолог</title>
+    <link rel="icon" type="image/png" href="favicon-dark__2.png">
     <style>
         * {
             margin: 0;
@@ -44,6 +45,21 @@
         }
 
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .logo img {
+            width: 64px;
+            height: 64px;
+            object-fit: contain;
+        }
+        
+        .logo h2 {
+            margin: 0;
             font-size: 28px;
             font-weight: bold;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -209,7 +225,10 @@
 <body>
     <header>
         <div class="header-content">
-            <div class="logo">SolvoAI</div>
+            <div class="logo">
+                <img src="favicon-dark.png" alt="SolvoAI Logo">
+                <h2>SolvoAI</h2>
+            </div>
             <nav>
                 <a href="#home">Главная</a>
                 <a href="#services">Услуги</a>
